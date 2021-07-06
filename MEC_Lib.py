@@ -8,7 +8,7 @@ def text2hex(t): return ' '.join([hex(b) for b in bytearray(t, 'utf-8')]).replac
 def hex2text(h): return ''.join([chr(int(t, 16)) for t in h.split()])
 
 def hex2rgb(h): return tuple(int(h.replace('#', '')[i:i+2], 16) for i in (0, 2, 4))
-def rgb2hex(r): return '#{:02x}{:02x}{:02x}'.format(r[0], r[1], r[2])
+def rgb2hex(r): return '#{:02x}{:02x}{:02x}'.format(*r)
 
 """
 ============================================================
